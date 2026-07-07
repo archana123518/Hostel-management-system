@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management & Mess Billing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Menu</h3>
+
+        <a href="#">🏠 "index.html">Dashboard</a>
+        <a href="#">👨‍🎓 Students</a>
+        <a href="#">🛏️ Rooms</a>
+        <a href="#">🍽️ Mess Bills</a>
+        <a href="#">💳 Fee Payments</a>
+        <a href="#">📊 Reports</a>
+        <a href="#" onclick="logout()" class="logout-menu">🚪 Logout</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h1>Student Management</h1>
+
+        <div class="dashboard">
+
+            <h1>Student Management</h1>
+
+<div class="student-header">
+    <button class="add-btn">+ Add Student</button>
+
+    <input type="text" placeholder="Search Student..." id="searchInput">
+</div>
+
+<table class="student-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Room No</th>
+            <th>Year</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="studentTableBody">
+        <tr>
+            <td>101</td>
+            <td>Archana</td>
+            <td>ECE</td>
+            <td>A-101</td>
+            <td>IV</td>
+            <td>Paid</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+            
+
+        </div>
+
+    </div>
+
+ 
+
+<script src="script.js"></script>
+
+</body>
+</html>
