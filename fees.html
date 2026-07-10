@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fee Payments</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Menu</h2>
+
+<a href="index.html">🏠 Dashboard</a>
+
+<a href="Students.html">👨‍🎓 Students</a>
+
+<a href="rooms.html">🛏️ Rooms</a>
+
+<a href="mess.html">🍽️ Mess Bills</a>
+
+<a href="fees.html" class="active">💳 Fee Payments</a>
+
+<a href="reports.html">📊 Reports</a>
+
+<a href="#" class="logout-btn" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="content">
+
+<h1>Fee Payments Management</h1>
+
+<div class="student-header">
+
+<button class="add-btn" onclick="showFeeForm()">
++ Add Payment
+</button>
+
+<input
+type="text"
+id="feeSearch"
+placeholder="Search Student..."
+onkeyup="searchFee()">
+
+</div>
+
+<!-- Fee Form -->
+
+<div id="feeForm" class="student-form" style="display:none;">
+
+<input type="text" id="feeId" placeholder="Student ID">
+
+<input type="text" id="feeName" placeholder="Student Name">
+
+<input type="text" id="feeDepartment" placeholder="Department">
+
+<select id="feeType">
+<option value="">Select Fee Type</option>
+<option value="Hostel Fee">Hostel Fee</option>
+<option value="Mess Fee">Mess Fee</option>
+
+</select>
+
+<input type="number" id="feeAmount" placeholder="Amount">
+
+<input type="date" id="feeDate">
+
+<select id="feeStatus">
+<option value="Paid">Paid</option>
+<option value="Pending">Pending</option>
+</select>
+
+<button onclick="saveFee()">
+Save
+</button>
+
+<button onclick="cancelFeeForm()">
+Cancel
+</button>
+
+</div>
+
+<!-- Table -->
+
+<table class="student-table">
+
+<thead>
+
+<tr>
+
+<th>Student ID</th>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>Fee Type</th>
+
+<th>Amount</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="feeTableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="fees.js"></script>
+
+</body>
+</html>

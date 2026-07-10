@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mess Bills</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Menu</h2>
+
+<a href="index.html">🏠 Dashboard</a>
+
+<a href="Students.html">👨‍🎓 Students</a>
+
+<a href="rooms.html">🛏️ Rooms</a>
+
+<a href="mess.html" class="active">🍽️ Mess Bills</a>
+
+<a href="fees.html">💳 Fee Payments</a>
+
+<a href="reports.html">📊 Reports</a>
+
+<a href="#" class="logout-btn" onclick="logout()">🚪 Logout</a>
+
+
+</div>
+
+
+
+
+<!-- Main Content -->
+
+<div class="content">
+
+
+<h1>Mess Bills Management</h1>
+
+
+
+<div class="student-header">
+
+
+<button class="add-btn" onclick="showMessForm()">
++ Add Bill
+</button>
+
+
+<input 
+type="text"
+id="messSearch"
+placeholder="Search Student..."
+onkeyup="searchMess()">
+
+
+</div>
+
+
+
+
+<!-- Mess Form -->
+
+<div id="messForm" class="student-form" style="display:none;">
+
+
+<input type="text" id="messId" placeholder="Student ID">
+
+
+<input type="text" id="messName" placeholder="Student Name">
+
+
+<input type="text" id="messMonth" placeholder="Month">
+
+
+<input type="number" id="messAmount" placeholder="Amount">
+
+
+
+<select id="messStatus">
+
+<option value="Paid">Paid</option>
+
+<option value="Pending">Pending</option>
+
+</select>
+
+
+
+<button onclick="saveMessBill()">
+Save
+</button>
+
+
+<button onclick="cancelMessForm()">
+Cancel
+</button>
+
+
+
+</div>
+
+
+
+
+
+<!-- Table -->
+
+
+<table class="student-table">
+
+
+<thead>
+
+<tr>
+
+<th>Student ID</th>
+
+<th>Name</th>
+
+<th>Month</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="messTableBody">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="mess.js"></script>
+
+
+</body>
+
+</html>
